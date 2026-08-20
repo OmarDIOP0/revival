@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\Revival\\Revival\\Revival.csproj": {}
+    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\revival\\Revival\\Revival.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\Revival\\Revival\\Revival.csproj": {
+    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\revival\\Revival\\Revival.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\Revival\\Revival\\Revival.csproj",
+        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\revival\\Revival\\Revival.csproj",
         "projectName": "Revival",
-        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\Revival\\Revival\\Revival.csproj",
+        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\revival\\Revival\\Revival.csproj",
         "packagesPath": "C:\\Users\\bmd tech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\Revival\\Revival\\obj\\",
+        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\revival\\Revival\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

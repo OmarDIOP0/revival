@@ -1,4 +1,10 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+// Vanilla JS only. The site must stay fully usable without this file.
 
-// Write your JavaScript code.
+// Close the mobile nav disclosure after a link is activated.
+document.querySelectorAll(".nav-toggle").forEach(function (toggle) {
+  toggle.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      toggle.removeAttribute("open");
+    });
+  });
+});
