@@ -1,0 +1,16 @@
+﻿@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@inject IOptions<SiteSettings> SiteOptions
+@inject IViewLocalizer Localizer
+@{
+    var site = SiteOptions.Value;
+}
+@if (!string.IsNullOrWhiteSpace(site.WhatsApp))
+{
+    var digits = new string(site.WhatsApp.Where(char.IsDigit).ToArray());
+    var message = Uri.EscapeDataString(Localizer["WhatsAppDefaultMessage"].Value);
+    <a class="whatsapp-fab" href="https://wa.me/@digits?text=@message" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+        <span>@Localizer["WhatsAppCta"]</span>
+    </a>
+}

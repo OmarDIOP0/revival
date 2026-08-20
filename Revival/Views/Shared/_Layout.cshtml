@@ -1,50 +1,135 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+@using System.Globalization
+@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@inject IViewLocalizer Localizer
+@inject IOptions<SiteSettings> SiteOptions
+@inject IOptions<List<SocialLink>> SocialOptions
+@{
+    var currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var request = ViewContext.HttpContext.Request;
+    var path = request.Path.Value ?? "/";
+
+    string pathWithoutCulture;
+    if (path.StartsWith("/en", StringComparison.Ordinal) || path.StartsWith("/fr", StringComparison.Ordinal))
+    {
+        var rest = path.Length > 3 ? path[3..] : "";
+        pathWithoutCulture = string.IsNullOrEmpty(rest) ? "/" : rest;
+    }
+    else
+    {
+        pathWithoutCulture = path;
+    }
+
+    var baseUrl = $"{request.Scheme}://{request.Host}";
+    var enUrl = "/en" + (pathWithoutCulture == "/" ? "" : pathWithoutCulture);
+    var frUrl = "/fr" + (pathWithoutCulture == "/" ? "" : pathWithoutCulture);
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+
+    var site = SiteOptions.Value;
+    var socialLinks = SocialOptions.Value ?? new List<SocialLink>();
+}
+<!DOCTYPE html>
+<html lang="@currentCulture">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Revival</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@(ViewData["Title"] != null ? $"{ViewData["Title"]} — " : "")@Localizer["TitleSuffix"]</title>
+
+    <link rel="alternate" hreflang="en" href="@(baseUrl + enUrl)" />
+    <link rel="alternate" hreflang="fr" href="@(baseUrl + frUrl)" />
+    <link rel="alternate" hreflang="x-default" href="@(baseUrl + enUrl)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Public+Sans:wght@400;600&display=swap" />
+
+    <link rel="stylesheet" href="~/css/tokens.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Revival.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Revival</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @await Html.PartialAsync("_Icons")
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Revival - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <a class="skip-link" href="#main-content">@Localizer["SkipToContent"]</a>
+
+    <header class="site-header">
+        <div class="container site-header__bar">
+            <a class="brand" asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture">
+                <svg class="brand__mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
+                Revival
+            </a>
+
+            <details class="nav-toggle">
+                <summary aria-label="@Localizer["OpenMenu"]">
+                    <svg class="nav-toggle__icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+                </summary>
+                <nav class="primary-nav" aria-label="@Localizer["Nav_Home"]">
+                    <a asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Home" ? "page" : null)">@Localizer["Nav_Home"]</a>
+                    <a asp-controller="Center" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Center" ? "page" : null)">@Localizer["Nav_Center"]</a>
+                    <a asp-controller="Care" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Care" ? "page" : null)">@Localizer["Nav_Care"]</a>
+                    <a asp-controller="Team" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Team" ? "page" : null)">@Localizer["Nav_Team"]</a>
+                    <a asp-controller="International" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "International" ? "page" : null)">@Localizer["Nav_International"]</a>
+                    <a asp-controller="Foundation" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Foundation" ? "page" : null)">@Localizer["Nav_Foundation"]</a>
+                    <a asp-controller="Contact" asp-action="Index" asp-route-culture="@currentCulture"
+                       aria-current="@(currentController == "Contact" ? "page" : null)">@Localizer["Nav_Contact"]</a>
+                </nav>
+            </details>
+
+            <div class="lang-switch" aria-label="@Localizer["Language"]">
+                <a href="@enUrl" hreflang="en" aria-current="@(currentCulture == "en" ? "true" : null)">EN</a>
+                <a href="@frUrl" hreflang="fr" aria-current="@(currentCulture == "fr" ? "true" : null)">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div>
+                <h2>@Localizer["Footer_Contact"]</h2>
+                <ul class="site-footer__contact-list">
+                    <li><a href="tel:@site.Phone.Replace(" ", "")">@site.Phone</a></li>
+                    <li><a href="mailto:@site.Email">@site.Email</a></li>
+                    <li><address>@(currentCulture == "fr" ? site.AddressFr : site.AddressEn)</address></li>
+                </ul>
+            </div>
+            <div>
+                <h2>@Localizer["Footer_Hours"]</h2>
+                <p>@(currentCulture == "fr" ? site.HoursFr : site.HoursEn)</p>
+                <p class="text-sm">@site.Beds @Localizer["Footer_Beds"] &middot; @site.VipRooms @Localizer["Footer_VipRooms"]</p>
+            </div>
+            <div>
+                <h2>@Localizer["Footer_FollowUs"]</h2>
+                <ul class="social-list">
+                    @foreach (var link in socialLinks.Where(l => l.IsActive))
+                    {
+                        <li>
+                            <a href="@link.Url" target="_blank" rel="noopener" aria-label="@link.Name">
+                                <svg aria-hidden="true"><use href="#icon-@link.Icon"></use></svg>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="container site-footer__bottom">
+            &copy; @DateTime.UtcNow.Year Revival Medical Link. @Localizer["Footer_Rights"]
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await Html.PartialAsync("_WhatsAppButton")
+
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

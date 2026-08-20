@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="SkipToContent" xml:space="preserve"><value>Skip to content</value></data>
+  <data name="Nav_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav_Center" xml:space="preserve"><value>The Center</value></data>
+  <data name="Nav_Care" xml:space="preserve"><value>Our Care</value></data>
+  <data name="Nav_Team" xml:space="preserve"><value>Our Team</value></data>
+  <data name="Nav_International" xml:space="preserve"><value>International Patients</value></data>
+  <data name="Nav_Foundation" xml:space="preserve"><value>Ida Bass Foundation</value></data>
+  <data name="Nav_Contact" xml:space="preserve"><value>Contact &amp; Appointments</value></data>
+  <data name="OpenMenu" xml:space="preserve"><value>Open menu</value></data>
+  <data name="Language" xml:space="preserve"><value>Language</value></data>
+  <data name="Footer_Contact" xml:space="preserve"><value>Contact</value></data>
+  <data name="Footer_Hours" xml:space="preserve"><value>Opening hours</value></data>
+  <data name="Footer_FollowUs" xml:space="preserve"><value>Follow us</value></data>
+  <data name="Footer_Beds" xml:space="preserve"><value>beds</value></data>
+  <data name="Footer_VipRooms" xml:space="preserve"><value>VIP rooms</value></data>
+  <data name="Footer_Rights" xml:space="preserve"><value>All rights reserved.</value></data>
+  <data name="TitleSuffix" xml:space="preserve"><value>Revival Medical Link — Hemodialysis Center, Dakar</value></data>
+</root>

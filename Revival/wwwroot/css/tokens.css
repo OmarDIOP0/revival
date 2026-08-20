@@ -1,0 +1,76 @@
+/*
+  Design tokens — direction "Le fil du temps".
+  Palette grounded in the centre's own photos (walls, floor tiles, scrub blue) and its
+  existing red/teal mark, not a generic AI palette. Kept deliberately small.
+*/
+:root {
+  /* Color */
+  --color-ink: #1b2422;
+  --color-ink-soft: #4b5450;
+  --color-paper: #f5f3ef;
+  --color-paper-raised: #ffffff;
+  --color-stone: #e4ded4;
+  --color-stone-dark: #d5cdbe;
+  --color-border: #d8d2c7;
+
+  --color-brand: #1f4a46;
+  --color-brand-dark: #16332f;
+  --color-brand-tint: #e4ecea;
+
+  --color-accent: #b8432b;
+  --color-accent-dark: #8f3320;
+  --color-accent-tint: #f3dfd8;
+
+  --color-success: #3d6b52;
+  --color-danger: #a13b2e;
+
+  --color-focus-ring: #16332f;
+
+  /* Typography */
+  --font-heading: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+
+  --text-base: 1.125rem; /* 18px */
+  --text-sm: 0.9375rem; /* 15px, never smaller on this site */
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.5rem;
+
+  --leading-body: 1.6;
+  --leading-heading: 1.15;
+
+  /* Spacing scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 7.5rem;
+
+  /* Layout */
+  --content-max: 74rem;
+  --content-narrow: 42rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --touch-target: 44px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 150ms;
+  --duration-standard: 300ms;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 4rem;
+  }
+}

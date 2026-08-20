@@ -1,0 +1,265 @@
+/* Header ------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  text-decoration: none;
+  min-height: var(--touch-target);
+}
+
+.brand:hover {
+  color: var(--color-ink);
+}
+
+.brand__mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+/* Primary nav — <details>/<summary> disclosure on mobile, plain row on desktop.
+   Works fully without JavaScript. */
+
+.nav-toggle {
+  margin-left: auto;
+}
+
+.nav-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.nav-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-toggle__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.primary-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-5) var(--space-5);
+}
+
+.primary-nav a {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+  background: var(--color-stone);
+  color: var(--color-brand-dark);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-ink-soft);
+}
+
+.lang-switch a[aria-current="true"] {
+  color: var(--color-ink);
+  background: var(--color-stone);
+}
+
+@media (min-width: 900px) {
+  .site-header__bar {
+    gap: var(--space-8);
+  }
+
+  .nav-toggle {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .nav-toggle > summary {
+    display: none;
+  }
+
+  .primary-nav {
+    position: static;
+    flex-direction: row;
+    border-bottom: none;
+    padding: 0;
+    background: transparent;
+    gap: var(--space-2);
+  }
+}
+
+/* Footer --------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--color-stone);
+  color: var(--color-ink);
+  margin-top: var(--space-10);
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: var(--space-7);
+  padding-block: var(--space-8);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+
+.site-footer h2 {
+  font-size: var(--text-base);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-3);
+}
+
+.site-footer address {
+  font-style: normal;
+}
+
+.site-footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.site-footer__contact-list a {
+  color: var(--color-ink);
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.social-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+}
+
+.social-list svg {
+  width: 20px;
+  height: 20px;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid var(--color-stone-dark);
+  padding-block: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+/* Floating WhatsApp button ---------------------------------------------- */
+
+.whatsapp-fab {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 52px;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(27, 36, 34, 0.25);
+}
+
+.whatsapp-fab:hover {
+  background: var(--color-accent-dark);
+  color: #fff;
+}
+
+.whatsapp-fab svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-fab span {
+    display: none;
+  }
+
+  .whatsapp-fab {
+    padding-inline: 0;
+    width: 52px;
+    justify-content: center;
+  }
+}
