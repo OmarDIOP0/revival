@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Ida Bass Foundation</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Ida Bass Foundation</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Making dialysis care accessible to patients who cannot afford it.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>A nurse accompanies a patient in a wheelchair.</value></data>
+  <data name="Origin_Title" xml:space="preserve"><value>Why the foundation exists</value></data>
+  <data name="Origin_Body" xml:space="preserve"><value>The foundation was born after the loss of Ida Bass, taken by kidney disease for lack of access to proper treatment. It carries her name.</value></data>
+  <data name="Help_Title" xml:space="preserve"><value>How it helps</value></data>
+  <data name="Help_Body" xml:space="preserve"><value>For patients who cannot afford treatment, the foundation covers all or part of the cost of dialysis, lab tests and medication, based on financial need.</value></data>
+  <data name="Donate_Title" xml:space="preserve"><value>Support the foundation</value></data>
+  <data name="Donate_Body" xml:space="preserve"><value>Every donation goes directly toward a patient's treatment.</value></data>
+  <data name="Donate_Link" xml:space="preserve"><value>Donate</value></data>
+</root>

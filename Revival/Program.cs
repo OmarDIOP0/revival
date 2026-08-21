@@ -2,6 +2,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Revival.Configuration;
 using Revival.Culture;
+using Revival.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.Configure<SiteSettings>(builder.Configuration.GetSection("Site"
 builder.Services.Configure<List<SocialLink>>(builder.Configuration.GetSection("SocialLinks"));
 builder.Services.Configure<List<TeamMember>>(builder.Configuration.GetSection("Team"));
 builder.Services.Configure<FoundationSettings>(builder.Configuration.GetSection("Foundation"));
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("Smtp"));
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>();
 
 var supportedCultures = new[] { new CultureInfo("en"), new CultureInfo("fr") };
 var localizationOptions = new RequestLocalizationOptions

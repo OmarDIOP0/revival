@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Revival")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute(" ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37ca414e4a9acfac86f4bab48a13fa05e66faf3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb7a03ec96bbb5026002621419c5d1fb3ee85ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("Revival")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Revival")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

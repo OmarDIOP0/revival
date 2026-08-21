@@ -20,4 +20,6 @@
   <data name="Access_Body" xml:space="preserve"><value>Retrouvez l'adresse complète, les horaires et l'itinéraire sur la page contact.</value></data>
   <data name="Access_ImageAlt" xml:space="preserve"><value>Façade du centre Revival Medical Link.</value></data>
   <data name="Access_Link" xml:space="preserve"><value>Voir l'adresse et les horaires</value></data>
+  <data name="Vision_Title" xml:space="preserve"><value>Notre vision</value></data>
+  <data name="Vision_Body" xml:space="preserve"><value>Devenir la référence des soins rénaux au Sénégal, et figurer parmi les centres médicaux de référence en Afrique subsaharienne.</value></data>
 </root>

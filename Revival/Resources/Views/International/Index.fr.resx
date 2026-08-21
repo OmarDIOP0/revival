@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Patients internationaux</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Patients internationaux</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Vous êtes de passage à Dakar et devez poursuivre vos séances ? Nous organisons votre dialyse de vacances.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>Membre de l'équipe administrative préparant un dossier patient.</value></data>
+  <data name="Timezone_Title" xml:space="preserve"><value>Fuseau horaire</value></data>
+  <data name="Timezone_Body" xml:space="preserve"><value>Dakar est à l'heure GMT (UTC+0) toute l'année, sans changement d'heure saisonnier.</value></data>
+  <data name="Response_Title" xml:space="preserve"><value>Nous vous répondons</value></data>
+  <data name="Response_Body" xml:space="preserve"><value>Par téléphone, WhatsApp ou email — notre équipe répond directement à toute demande avant votre séjour.</value></data>
+  <data name="Documents_Title" xml:space="preserve"><value>Documents à préparer avant votre séjour</value></data>
+  <data name="Documents_Item1" xml:space="preserve"><value>Votre dossier médical récent.</value></data>
+  <data name="Documents_Item2" xml:space="preserve"><value>Votre dernier bilan sanguin.</value></data>
+  <data name="Documents_Item3" xml:space="preserve"><value>Votre protocole de dialyse actuel — fréquence, durée, résultats.</value></data>
+  <data name="Dial_Title" xml:space="preserve"><value>Nous appeler depuis l'étranger</value></data>
+  <data name="Dial_France" xml:space="preserve"><value>Depuis la France</value></data>
+  <data name="Cta_Link" xml:space="preserve"><value>Organiser mon séjour</value></data>
+</root>

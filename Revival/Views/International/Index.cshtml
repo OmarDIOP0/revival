@@ -1,4 +1,59 @@
+@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@inject IViewLocalizer Localizer
+@inject IOptions<SiteSettings> SiteOptions
 @{
-    ViewData["Title"] = "International";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
+    var site = SiteOptions.Value;
+    var phoneHref = "tel:" + site.Phone.Replace(" ", "");
+    var franceDialDisplay = "00 " + site.Phone.TrimStart('+');
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+    <figure class="page-header__figure">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/intl-header-900.webp 900w, /img/derived/intl-header-1600.webp 1600w, /img/derived/intl-header-2400.webp 2400w"
+                    sizes="100vw" />
+            <img src="/img/derived/intl-header-1600.jpg"
+                 srcset="/img/derived/intl-header-900.jpg 900w, /img/derived/intl-header-1600.jpg 1600w, /img/derived/intl-header-2400.jpg 2400w"
+                 sizes="100vw"
+                 width="1600" height="900"
+                 alt="@Localizer["Header_ImageAlt"]"
+                 fetchpriority="high" />
+        </picture>
+    </figure>
+</section>
+
+<section class="band band--stone">
+    <div class="container stats__row">
+        <div>
+            <h2>@Localizer["Timezone_Title"]</h2>
+            <p>@Localizer["Timezone_Body"]</p>
+        </div>
+        <div>
+            <h2>@Localizer["Response_Title"]</h2>
+            <p>@Localizer["Response_Body"]</p>
+        </div>
+        <div>
+            <h2>@Localizer["Dial_Title"]</h2>
+            <p>
+                @Localizer["Dial_France"] : <a href="@phoneHref">@franceDialDisplay</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container-narrow text-band">
+    <h2>@Localizer["Documents_Title"]</h2>
+    <ul>
+        <li>@Localizer["Documents_Item1"]</li>
+        <li>@Localizer["Documents_Item2"]</li>
+        <li>@Localizer["Documents_Item3"]</li>
+    </ul>
+    <a class="btn btn-primary" asp-controller="Contact" asp-action="Index">@Localizer["Cta_Link"]</a>
+</section>

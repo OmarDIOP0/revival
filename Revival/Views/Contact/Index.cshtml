@@ -1,4 +1,110 @@
+@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@using Revival.Models
+@model ContactPageModel
+@inject IViewLocalizer Localizer
+@inject IOptions<SiteSettings> SiteOptions
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
+    var site = SiteOptions.Value;
+    var isFr = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr";
+    var phoneHref = "tel:" + site.Phone.Replace(" ", "");
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+</section>
+
+<section class="container split">
+    <div class="split__body">
+        <h2>@Localizer["Direct_Title"]</h2>
+        <ul class="contact-list">
+            <li><span class="contact-list__label">@Localizer["Direct_Phone_Label"]</span><a href="@phoneHref">@site.Phone</a></li>
+            <li><span class="contact-list__label">@Localizer["Direct_Email_Label"]</span><a href="mailto:@site.Email">@site.Email</a></li>
+            <li><span class="contact-list__label">@Localizer["Direct_Address_Label"]</span>@(isFr ? site.AddressFr : site.AddressEn)</li>
+            <li><span class="contact-list__label">@Localizer["Direct_Hours_Label"]</span>@(isFr ? site.HoursFr : site.HoursEn)</li>
+        </ul>
+
+        <div class="map-block">
+            <a id="map-trigger" class="btn btn-secondary" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/?api=1&query=Point+E+Rue+A+x+9+Dakar+Senegal">
+                @Localizer["Map_Show"]
+            </a>
+            <div id="map-container" class="map-container" hidden></div>
+        </div>
+    </div>
+
+    <div class="split__body">
+        <h2>@Localizer["Form_Title"]</h2>
+
+        @if (Model.Submitted)
+        {
+            <div class="form-notice form-notice--success" role="status">
+                <p><strong>@Localizer["Success_Title"]</strong></p>
+                <p>@Localizer["Success_Body"]</p>
+            </div>
+        }
+        else
+        {
+            @if (Model.FieldErrors.Any())
+            {
+                <div class="form-notice form-notice--error" role="alert">
+                    @Localizer["Error_Summary"]
+                </div>
+            }
+            <form method="post" class="contact-form" asp-controller="Contact" asp-action="Index">
+                @Html.AntiForgeryToken()
+
+                <div class="field">
+                    <label for="Name">@Localizer["Field_Name"]</label>
+                    <input type="text" id="Name" name="Name" value="@Model.Form.Name" required maxlength="120"
+                           aria-invalid="@(Model.FieldErrors.Contains("Name") ? "true" : "false")" />
+                    @if (Model.FieldErrors.Contains("Name")) { <p class="field__error">@Localizer["Error_Name"]</p> }
+                </div>
+
+                <div class="field">
+                    <label for="Phone">@Localizer["Field_Phone"]</label>
+                    <input type="tel" id="Phone" name="Phone" value="@Model.Form.Phone" required maxlength="40"
+                           aria-invalid="@(Model.FieldErrors.Contains("Phone") ? "true" : "false")" />
+                    @if (Model.FieldErrors.Contains("Phone")) { <p class="field__error">@Localizer["Error_Phone"]</p> }
+                </div>
+
+                <div class="field">
+                    <label for="Email">@Localizer["Field_Email"]</label>
+                    <input type="email" id="Email" name="Email" value="@Model.Form.Email" required maxlength="160"
+                           aria-invalid="@(Model.FieldErrors.Contains("Email") ? "true" : "false")" />
+                    @if (Model.FieldErrors.Contains("Email")) { <p class="field__error">@Localizer["Error_Email"]</p> }
+                </div>
+
+                <div class="field">
+                    <label for="Reason">@Localizer["Field_Reason"]</label>
+                    <select id="Reason" name="Reason" required
+                            aria-invalid="@(Model.FieldErrors.Contains("Reason") ? "true" : "false")">
+                        <option value="" disabled selected="@(string.IsNullOrEmpty(Model.Form.Reason))">@Localizer["Reason_Placeholder"]</option>
+                        <option value="new_patient" selected="@(Model.Form.Reason == "new_patient")">@Localizer["Reason_NewPatient"]</option>
+                        <option value="holiday_dialysis" selected="@(Model.Form.Reason == "holiday_dialysis")">@Localizer["Reason_Holiday"]</option>
+                        <option value="other" selected="@(Model.Form.Reason == "other")">@Localizer["Reason_Other"]</option>
+                    </select>
+                    @if (Model.FieldErrors.Contains("Reason")) { <p class="field__error">@Localizer["Error_Reason"]</p> }
+                </div>
+
+                <div class="field">
+                    <label for="Message">@Localizer["Field_Message"]</label>
+                    <textarea id="Message" name="Message" rows="5" required maxlength="2000"
+                              aria-invalid="@(Model.FieldErrors.Contains("Message") ? "true" : "false")">@Model.Form.Message</textarea>
+                    @if (Model.FieldErrors.Contains("Message")) { <p class="field__error">@Localizer["Error_Message"]</p> }
+                </div>
+
+                <div class="field field--honeypot" aria-hidden="true">
+                    <label for="Website">Website</label>
+                    <input type="text" id="Website" name="Website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">@Localizer["Submit"]</button>
+            </form>
+        }
+    </div>
+</section>

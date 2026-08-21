@@ -1,30 +1,36 @@
 /*
   Design tokens — direction "Le fil du temps".
-  Palette grounded in the centre's own photos (walls, floor tiles, scrub blue) and its
-  existing red/teal mark, not a generic AI palette. Kept deliberately small.
+  Palette sampled directly from Revival's own kidney mark (navy, teal, red, maroon) —
+  the clinic's real clinical identity, not a generic invented palette.
 */
 :root {
   /* Color */
-  --color-ink: #1b2422;
-  --color-ink-soft: #4b5450;
-  --color-paper: #f5f3ef;
+  --color-ink: #182226;
+  --color-ink-soft: #4e6068;
+  --color-paper: #f5f9f9;
   --color-paper-raised: #ffffff;
-  --color-stone: #e4ded4;
-  --color-stone-dark: #d5cdbe;
-  --color-border: #d8d2c7;
+  --color-stone: #e3f1f0;
+  --color-stone-dark: #cbe4e2;
+  --color-border: #cfe1e0;
 
-  --color-brand: #1f4a46;
-  --color-brand-dark: #16332f;
-  --color-brand-tint: #e4ecea;
+  --color-brand: #1e4a5f;
+  --color-brand-dark: #123140;
+  --color-brand-tint: #e2ebee;
 
-  --color-accent: #b8432b;
-  --color-accent-dark: #8f3320;
-  --color-accent-tint: #f3dfd8;
+  --color-teal: #0fb8ae;
+  --color-teal-dark: #0b8079;
+  --color-teal-tint: #d8f2f0;
 
-  --color-success: #3d6b52;
-  --color-danger: #a13b2e;
+  --color-accent: #c00f14;
+  --color-accent-dark: #93080c;
+  --color-accent-tint: #f6dedd;
 
-  --color-focus-ring: #16332f;
+  --color-maroon: #7a2436;
+
+  --color-success: #0b8079;
+  --color-danger: #c00f14;
+
+  --color-focus-ring: #123140;
 
   /* Typography */
   --font-heading: "Archivo", "Segoe UI", system-ui, sans-serif;
@@ -57,14 +63,18 @@
   /* Layout */
   --content-max: 74rem;
   --content-narrow: 42rem;
-  --radius-sm: 4px;
-  --radius-md: 8px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
   --touch-target: 44px;
+  --shadow-sm: 0 2px 8px rgba(18, 49, 64, 0.1);
+  --shadow-md: 0 12px 32px rgba(18, 49, 64, 0.16);
 
   /* Motion */
   --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 150ms;
   --duration-standard: 300ms;
+  --duration-slow: 700ms;
 }
 
 @media (min-width: 768px) {

@@ -126,7 +126,9 @@ figure {
   text-decoration: none;
   cursor: pointer;
   transition: background-color var(--duration-fast) var(--ease-standard),
-              border-color var(--duration-fast) var(--ease-standard);
+              border-color var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-out-soft),
+              box-shadow var(--duration-fast) var(--ease-out-soft);
 }
 
 .btn-primary {
@@ -139,6 +141,8 @@ figure {
   background: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary {
@@ -150,6 +154,12 @@ figure {
 .btn-secondary:hover {
   background: var(--color-ink);
   color: var(--color-paper);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 /* Duotone photo treatment — reusable across content pages to unify un-color-graded photos */
@@ -170,6 +180,25 @@ figure {
   background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-stone) 100%);
   opacity: 0.85;
 }
+
+/* Scroll-reveal — progressive enhancement only.
+   Without the .js class (no JS, or JS failed) everything stays fully visible. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out-soft),
+              transform var(--duration-slow) var(--ease-out-soft);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.js .reveal-group .reveal:nth-child(2) { transition-delay: 90ms; }
+.js .reveal-group .reveal:nth-child(3) { transition-delay: 180ms; }
+.js .reveal-group .reveal:nth-child(4) { transition-delay: 270ms; }
+.js .reveal-group .reveal:nth-child(5) { transition-delay: 360ms; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

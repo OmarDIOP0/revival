@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>International Patients</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>International Patients</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Traveling to Dakar and need to keep up your sessions? We arrange holiday dialysis.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>An administrative team member preparing a patient file.</value></data>
+  <data name="Timezone_Title" xml:space="preserve"><value>Time zone</value></data>
+  <data name="Timezone_Body" xml:space="preserve"><value>Dakar is on GMT (UTC+0) year-round, with no seasonal time change.</value></data>
+  <data name="Response_Title" xml:space="preserve"><value>We answer directly</value></data>
+  <data name="Response_Body" xml:space="preserve"><value>By phone, WhatsApp or email — our team answers every request directly before your stay.</value></data>
+  <data name="Documents_Title" xml:space="preserve"><value>Documents to prepare before your stay</value></data>
+  <data name="Documents_Item1" xml:space="preserve"><value>Your recent medical file.</value></data>
+  <data name="Documents_Item2" xml:space="preserve"><value>Your latest blood test results.</value></data>
+  <data name="Documents_Item3" xml:space="preserve"><value>Your current dialysis protocol — frequency, duration, results.</value></data>
+  <data name="Dial_Title" xml:space="preserve"><value>Calling us from abroad</value></data>
+  <data name="Dial_France" xml:space="preserve"><value>From France</value></data>
+  <data name="Cta_Link" xml:space="preserve"><value>Plan my stay</value></data>
+</root>

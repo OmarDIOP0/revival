@@ -20,4 +20,6 @@
   <data name="Access_Body" xml:space="preserve"><value>Find the full address, hours and directions on the contact page.</value></data>
   <data name="Access_ImageAlt" xml:space="preserve"><value>Revival Medical Link centre facade.</value></data>
   <data name="Access_Link" xml:space="preserve"><value>See address and hours</value></data>
+  <data name="Vision_Title" xml:space="preserve"><value>Our vision</value></data>
+  <data name="Vision_Body" xml:space="preserve"><value>To become the reference for renal care in Senegal, and rank among the leading medical centres in Sub-Saharan Africa.</value></data>
 </root>

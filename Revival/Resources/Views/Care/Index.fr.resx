@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Nos soins</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Nos soins</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>L'hémodialyse filtre votre sang quand vos reins ne le peuvent plus. Chaque séance dure plusieurs heures, sous surveillance continue.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>Une infirmière ajuste le moniteur d'un poste de dialyse pendant une séance.</value></data>
+  <data name="Steps_Title" xml:space="preserve"><value>Le déroulé d'une séance</value></data>
+  <data name="Step1" xml:space="preserve"><value>Accueil et prise de constantes — poids, tension.</value></data>
+  <data name="Step2" xml:space="preserve"><value>Installation à votre poste.</value></data>
+  <data name="Step3" xml:space="preserve"><value>Branchement au générateur par l'équipe soignante.</value></data>
+  <data name="Step4" xml:space="preserve"><value>Surveillance continue pendant toute la séance.</value></data>
+  <data name="Step5" xml:space="preserve"><value>Débranchement et contrôle avant votre départ.</value></data>
+  <data name="Frequency_Title" xml:space="preserve"><value>À quelle fréquence ?</value></data>
+  <data name="Frequency_Body" xml:space="preserve"><value>La plupart des patients viennent 3 fois par semaine. Votre néphrologue ajuste ce rythme selon votre état.</value></data>
+  <data name="Prepare_Title" xml:space="preserve"><value>Ce qu'il faut prévoir</value></data>
+  <data name="Prepare_Item1" xml:space="preserve"><value>Une pièce d'identité et votre dossier médical.</value></data>
+  <data name="Prepare_Item2" xml:space="preserve"><value>De quoi vous occuper — livre, musique, tablette.</value></data>
+  <data name="Prepare_Item3" xml:space="preserve"><value>Une petite collation, si votre régime le permet.</value></data>
+  <data name="Prepare_ImageAlt" xml:space="preserve"><value>Une infirmière accompagne un patient en fauteuil roulant dans un couloir du centre.</value></data>
+  <data name="Cta_Title" xml:space="preserve"><value>Une question avant votre 1re séance ?</value></data>
+  <data name="Cta_Link" xml:space="preserve"><value>Nous contacter</value></data>
+</root>

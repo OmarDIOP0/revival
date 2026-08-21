@@ -39,6 +39,12 @@
     <link rel="alternate" hreflang="fr" href="@(baseUrl + frUrl)" />
     <link rel="alternate" hreflang="x-default" href="@(baseUrl + enUrl)" />
 
+    <link rel="icon" type="image/png" sizes="32x32" href="~/img/favicon-32.png" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/img/favicon-192.png" asp-append-version="true" />
+    <link rel="apple-touch-icon" href="~/img/favicon-192.png" asp-append-version="true" />
+
+    <script>document.documentElement.classList.add('js');</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Public+Sans:wght@400;600&display=swap" />
@@ -57,8 +63,8 @@
     <header class="site-header">
         <div class="container site-header__bar">
             <a class="brand" asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture">
-                <svg class="brand__mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
-                Revival
+                <img class="brand__mark" src="~/img/derived/brand-icon-96.png" width="40" height="40" alt="" />
+                <span>Revival</span>
             </a>
 
             <details class="nav-toggle">

@@ -1,4 +1,54 @@
+@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@inject IViewLocalizer Localizer
+@inject IOptions<FoundationSettings> FoundationOptions
 @{
-    ViewData["Title"] = "Foundation";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
+    var foundation = FoundationOptions.Value;
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+    <figure class="page-header__figure">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/support-700.webp 700w, /img/derived/support-1400.webp 1400w"
+                    sizes="100vw" />
+            <img src="/img/derived/support-1400.jpg"
+                 srcset="/img/derived/support-700.jpg 700w, /img/derived/support-1400.jpg 1400w"
+                 sizes="100vw"
+                 width="1400" height="1120"
+                 alt="@Localizer["Header_ImageAlt"]"
+                 fetchpriority="high" />
+        </picture>
+    </figure>
+</section>
+
+<section class="container split">
+    <div class="split__body">
+        <h2>@Localizer["Origin_Title"]</h2>
+        <p>@Localizer["Origin_Body"]</p>
+    </div>
+    <div class="split__body">
+        <h2>@Localizer["Help_Title"]</h2>
+        <p>@Localizer["Help_Body"]</p>
+    </div>
+</section>
+
+<section class="foundation-teaser">
+    <div class="container foundation-teaser__inner">
+        <h2>@Localizer["Donate_Title"]</h2>
+        <p>@Localizer["Donate_Body"]</p>
+        @if (!string.IsNullOrWhiteSpace(foundation.DonateUrl))
+        {
+            <a class="btn btn-secondary" href="@foundation.DonateUrl" target="_blank" rel="noopener">@Localizer["Donate_Link"]</a>
+        }
+        @if (!string.IsNullOrWhiteSpace(foundation.Url))
+        {
+            <p><a href="@foundation.Url" target="_blank" rel="noopener">@foundation.Name</a></p>
+        }
+    </div>
+</section>

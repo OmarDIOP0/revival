@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Fondation Ida Bass</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Fondation Ida Bass</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Rendre les soins de dialyse accessibles aux patients qui ne peuvent pas les financer.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>Une infirmière accompagne un patient en fauteuil roulant.</value></data>
+  <data name="Origin_Title" xml:space="preserve"><value>Pourquoi la fondation existe</value></data>
+  <data name="Origin_Body" xml:space="preserve"><value>La fondation est née après la perte d'Ida Bass, emportée par une maladie rénale faute d'accès à un traitement adapté. Elle porte son nom.</value></data>
+  <data name="Help_Title" xml:space="preserve"><value>Comment elle aide</value></data>
+  <data name="Help_Body" xml:space="preserve"><value>Pour les patients qui ne peuvent pas financer leur traitement, la fondation prend en charge tout ou partie des frais de dialyse, d'analyses et de médicaments, sous condition de ressources.</value></data>
+  <data name="Donate_Title" xml:space="preserve"><value>Soutenir la fondation</value></data>
+  <data name="Donate_Body" xml:space="preserve"><value>Chaque don contribue directement au traitement d'un patient.</value></data>
+  <data name="Donate_Link" xml:space="preserve"><value>Faire un don</value></data>
+</root>

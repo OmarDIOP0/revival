@@ -16,7 +16,18 @@
   <data name="Care_Title" xml:space="preserve"><value>Ce que vous vivez pendant une séance</value></data>
   <data name="Care_Body" xml:space="preserve"><value>Vos constantes sont surveillées en continu, dans un environnement calme et propre. Notre équipe reste à vos côtés du début à la fin.</value></data>
   <data name="Care_ImageAlt" xml:space="preserve"><value>Générateur de dialyse, prêt pour une séance.</value></data>
+  <data name="Care_Body2" xml:space="preserve"><value>Nous utilisons un équipement parmi les plus performants disponibles, avec des consommables haut de gamme pour chaque séance.</value></data>
   <data name="Care_Link" xml:space="preserve"><value>Découvrir nos soins</value></data>
+  <data name="Trust_1" xml:space="preserve"><value>Soins de confiance</value></data>
+  <data name="Trust_2" xml:space="preserve"><value>Médecins qualifiés</value></data>
+  <data name="Trust_3" xml:space="preserve"><value>Un soin pour chaque patient</value></data>
+  <data name="Calmer_Eyebrow" xml:space="preserve"><value>Notre différence</value></data>
+  <data name="Calmer_Title" xml:space="preserve"><value>Une dialyse plus sereine</value></data>
+  <data name="Calmer_Body" xml:space="preserve"><value>Trop de patients vivent leurs séances comme une épreuve. Chez Revival, nous avons pensé chaque détail — matériel, personnel, ambiance — pour que la vôtre soit sûre, confortable et sans stress.</value></data>
+  <data name="Hygiene_Title" xml:space="preserve"><value>Vous protéger des infections croisées</value></data>
+  <data name="Hygiene_Body" xml:space="preserve"><value>Nous suivons des protocoles stricts pour éliminer tout risque de contamination croisée entre patients.</value></data>
+  <data name="Experts_Title" xml:space="preserve"><value>Entre les mains d'experts</value></data>
+  <data name="Experts_Body" xml:space="preserve"><value>L'équipe qui vous suit pendant votre séance est composée de spécialistes rénaux certifiés, avec des années d'expérience dans ce domaine.</value></data>
   <data name="Team_Title" xml:space="preserve"><value>L'équipe qui vous suit</value></data>
   <data name="Team_Body" xml:space="preserve"><value>Des soignants certifiés, présents à chaque séance.</value></data>
   <data name="Team_Link" xml:space="preserve"><value>Voir toute l'équipe</value></data>

@@ -16,15 +16,20 @@
 }
 
 <section class="container hero">
-    <div class="hero__intro">
+    <div class="hero__intro reveal">
         <h1>@Localizer["Hero_Title"]</h1>
         <p class="text-lg">@Localizer["Hero_Subtitle"]</p>
         <div class="hero__actions">
             <a class="btn btn-primary" asp-controller="Contact" asp-action="Index">@Localizer["Cta_Book"]</a>
             <a class="btn btn-secondary" href="@phoneHref">@Localizer["Cta_Call"]</a>
         </div>
+        <ul class="trust-pills">
+            <li>@Localizer["Trust_1"]</li>
+            <li>@Localizer["Trust_2"]</li>
+            <li>@Localizer["Trust_3"]</li>
+        </ul>
     </div>
-    <figure class="hero__figure">
+    <figure class="hero__figure reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/home-hero-900.webp 900w, /img/derived/home-hero-1600.webp 1600w, /img/derived/home-hero-2400.webp 2400w"
@@ -39,36 +44,41 @@
     </figure>
 </section>
 
+<section class="band band--stone calmer">
+    <div class="container-narrow text-band reveal">
+        <p class="calmer__eyebrow">@Localizer["Calmer_Eyebrow"]</p>
+        <h2>@Localizer["Calmer_Title"]</h2>
+        <p class="text-lg">@Localizer["Calmer_Body"]</p>
+    </div>
+</section>
+
 <section class="stats" aria-label="@Localizer["Stat_Beds"]">
-    <div class="container stats__row">
-        <div class="stat">
+    <div class="container stats__row reveal-group">
+        <div class="stat reveal">
             <div class="stat-ring">
                 <svg viewBox="0 0 120 120" aria-hidden="true">
                     <circle class="stat-ring__track" cx="60" cy="60" r="48" />
-                    <circle class="stat-ring__fill" cx="60" cy="60" r="48"
-                            stroke-dasharray="301.6" stroke-dashoffset="135.7" />
+                    <circle class="stat-ring__fill" cx="60" cy="60" r="48" style="--ring-target: 135.7" />
                 </svg>
                 <span class="stat-ring__value">@site.Beds</span>
             </div>
             <p class="stat__label">@Localizer["Stat_Beds"]</p>
         </div>
-        <div class="stat">
+        <div class="stat reveal">
             <div class="stat-ring">
                 <svg viewBox="0 0 120 120" aria-hidden="true">
                     <circle class="stat-ring__track" cx="60" cy="60" r="48" />
-                    <circle class="stat-ring__fill" cx="60" cy="60" r="48"
-                            stroke-dasharray="301.6" stroke-dashoffset="211.1" />
+                    <circle class="stat-ring__fill" cx="60" cy="60" r="48" style="--ring-target: 211.1" />
                 </svg>
                 <span class="stat-ring__value">@site.VipRooms</span>
             </div>
             <p class="stat__label">@Localizer["Stat_Vip"]</p>
         </div>
-        <div class="stat">
+        <div class="stat reveal">
             <div class="stat-ring">
                 <svg viewBox="0 0 120 120" aria-hidden="true">
                     <circle class="stat-ring__track" cx="60" cy="60" r="48" />
-                    <circle class="stat-ring__fill" cx="60" cy="60" r="48"
-                            stroke-dasharray="301.6" stroke-dashoffset="60.3" />
+                    <circle class="stat-ring__fill" cx="60" cy="60" r="48" style="--ring-target: 60.3" />
                 </svg>
                 <span class="stat-ring__value">60</span>
             </div>
@@ -78,7 +88,7 @@
 </section>
 
 <section class="container split">
-    <div class="split__media">
+    <div class="split__media reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/home-care-700.webp 700w, /img/derived/home-care-1400.webp 1400w"
@@ -91,28 +101,42 @@
                  loading="lazy" />
         </picture>
     </div>
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Care_Title"]</h2>
         <p>@Localizer["Care_Body"]</p>
+        <p>@Localizer["Care_Body2"]</p>
         <a class="btn btn-secondary" asp-controller="Care" asp-action="Index">@Localizer["Care_Link"]</a>
     </div>
 </section>
 
+<section class="band band--stone">
+    <div class="container split">
+        <div class="split__body reveal">
+            <h2>@Localizer["Hygiene_Title"]</h2>
+            <p>@Localizer["Hygiene_Body"]</p>
+        </div>
+        <div class="split__body reveal">
+            <h2>@Localizer["Experts_Title"]</h2>
+            <p>@Localizer["Experts_Body"]</p>
+        </div>
+    </div>
+</section>
+
 <section class="container team-teaser">
-    <div class="team-teaser__intro">
+    <div class="team-teaser__intro reveal">
         <h2>@Localizer["Team_Title"]</h2>
         <p>@Localizer["Team_Body"]</p>
     </div>
     @if (teamPreview.Any())
     {
-        <div class="team-teaser__grid">
+        <div class="team-teaser__grid reveal-group">
             @foreach (var member in teamPreview)
             {
                 var role = isFr ? member.RoleFr : member.RoleEn;
                 var initials = string.Concat(member.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries)
                     .Select(p => p[0])).ToUpperInvariant();
                 if (initials.Length > 2) { initials = initials[..2]; }
-                <div class="team-card">
+                <div class="team-card reveal">
                     <div class="team-card__avatar" aria-hidden="true">
                         @if (!string.IsNullOrWhiteSpace(member.Photo))
                         {
@@ -129,13 +153,13 @@
             }
         </div>
     }
-    <p style="margin-top: var(--space-6);">
+    <p class="team-teaser__cta">
         <a class="btn btn-secondary" asp-controller="Team" asp-action="Index">@Localizer["Team_Link"]</a>
     </p>
 </section>
 
 <section class="foundation-teaser">
-    <div class="container foundation-teaser__inner">
+    <div class="container foundation-teaser__inner reveal">
         <h2>@Localizer["Foundation_Title"]</h2>
         <p>@Localizer["Foundation_Body"]</p>
         <a class="btn btn-secondary" asp-controller="Foundation" asp-action="Index">@Localizer["Foundation_Link"]</a>

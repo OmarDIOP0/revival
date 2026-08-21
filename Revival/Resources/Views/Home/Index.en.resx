@@ -16,7 +16,18 @@
   <data name="Care_Title" xml:space="preserve"><value>What a session looks like</value></data>
   <data name="Care_Body" xml:space="preserve"><value>Your vitals are monitored continuously, in a calm, clean setting. Our team stays with you from start to finish.</value></data>
   <data name="Care_ImageAlt" xml:space="preserve"><value>Dialysis machine, ready for a session.</value></data>
+  <data name="Care_Body2" xml:space="preserve"><value>We use some of the best-performing equipment available, with high-grade consumables for every session.</value></data>
   <data name="Care_Link" xml:space="preserve"><value>Discover our care</value></data>
+  <data name="Trust_1" xml:space="preserve"><value>Trusted care</value></data>
+  <data name="Trust_2" xml:space="preserve"><value>Qualified doctors</value></data>
+  <data name="Trust_3" xml:space="preserve"><value>Care for every patient</value></data>
+  <data name="Calmer_Eyebrow" xml:space="preserve"><value>What sets us apart</value></data>
+  <data name="Calmer_Title" xml:space="preserve"><value>A calmer dialysis</value></data>
+  <data name="Calmer_Body" xml:space="preserve"><value>Too many patients experience their sessions as an ordeal. At Revival, we've thought through every detail — equipment, staff, atmosphere — so yours is safe, comfortable and stress-free.</value></data>
+  <data name="Hygiene_Title" xml:space="preserve"><value>Protecting you from cross-infection</value></data>
+  <data name="Hygiene_Body" xml:space="preserve"><value>We follow strict protocols to eliminate any risk of cross-contamination between patients.</value></data>
+  <data name="Experts_Title" xml:space="preserve"><value>In the hands of experts</value></data>
+  <data name="Experts_Body" xml:space="preserve"><value>The team looking after you during your session is made up of certified renal specialists with years of experience in the field.</value></data>
   <data name="Team_Title" xml:space="preserve"><value>The team that follows your care</value></data>
   <data name="Team_Body" xml:space="preserve"><value>Certified caregivers, present at every session.</value></data>
   <data name="Team_Link" xml:space="preserve"><value>Meet the whole team</value></data>

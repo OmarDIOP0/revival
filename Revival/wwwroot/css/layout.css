@@ -33,9 +33,13 @@
 }
 
 .brand__mark {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
+}
+
+.brand span {
+  color: var(--color-accent);
 }
 
 /* Primary nav — <details>/<summary> disclosure on mobile, plain row on desktop.

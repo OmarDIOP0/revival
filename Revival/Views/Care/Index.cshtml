@@ -1,4 +1,70 @@
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Care";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro reveal">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+    <figure class="page-header__figure reveal">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/care-header-900.webp 900w, /img/derived/care-header-1600.webp 1600w, /img/derived/care-header-2400.webp 2400w"
+                    sizes="100vw" />
+            <img src="/img/derived/care-header-1600.jpg"
+                 srcset="/img/derived/care-header-900.jpg 900w, /img/derived/care-header-1600.jpg 1600w, /img/derived/care-header-2400.jpg 2400w"
+                 sizes="100vw"
+                 width="1600" height="900"
+                 alt="@Localizer["Header_ImageAlt"]"
+                 fetchpriority="high" />
+        </picture>
+    </figure>
+</section>
+
+<section class="band band--stone">
+    <div class="container-narrow text-band reveal">
+        <h2>@Localizer["Steps_Title"]</h2>
+        <ol class="steps reveal-group">
+            <li class="reveal">@Localizer["Step1"]</li>
+            <li class="reveal">@Localizer["Step2"]</li>
+            <li class="reveal">@Localizer["Step3"]</li>
+            <li class="reveal">@Localizer["Step4"]</li>
+            <li class="reveal">@Localizer["Step5"]</li>
+        </ol>
+    </div>
+</section>
+
+<section class="container split">
+    <div class="split__media">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/support-700.webp 700w, /img/derived/support-1400.webp 1400w"
+                    sizes="(min-width: 768px) 40vw, 100vw" />
+            <img src="/img/derived/support-700.jpg"
+                 srcset="/img/derived/support-700.jpg 700w, /img/derived/support-1400.jpg 1400w"
+                 sizes="(min-width: 768px) 40vw, 100vw"
+                 width="700" height="560"
+                 alt="@Localizer["Prepare_ImageAlt"]"
+                 loading="lazy" />
+        </picture>
+    </div>
+    <div class="split__body">
+        <h2>@Localizer["Prepare_Title"]</h2>
+        <ul>
+            <li>@Localizer["Prepare_Item1"]</li>
+            <li>@Localizer["Prepare_Item2"]</li>
+            <li>@Localizer["Prepare_Item3"]</li>
+        </ul>
+        <h3>@Localizer["Frequency_Title"]</h3>
+        <p>@Localizer["Frequency_Body"]</p>
+    </div>
+</section>
+
+<section class="foundation-teaser">
+    <div class="container foundation-teaser__inner">
+        <h2>@Localizer["Cta_Title"]</h2>
+        <a class="btn btn-secondary" asp-controller="Contact" asp-action="Index">@Localizer["Cta_Link"]</a>
+    </div>
+</section>

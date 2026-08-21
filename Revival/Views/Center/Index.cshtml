@@ -4,11 +4,11 @@
 }
 
 <section class="container page-header">
-    <div class="page-header__intro">
+    <div class="page-header__intro reveal">
         <h1>@Localizer["Header_Title"]</h1>
         <p class="text-lg">@Localizer["Header_Intro"]</p>
     </div>
-    <figure class="page-header__figure">
+    <figure class="page-header__figure reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/center-rooms-900.webp 900w, /img/derived/center-rooms-1600.webp 1600w, /img/derived/center-rooms-2400.webp 2400w"
@@ -24,14 +24,14 @@
 </section>
 
 <section class="band band--stone">
-    <div class="container-narrow text-band">
+    <div class="container-narrow text-band reveal">
         <h2>@Localizer["Rooms_Title"]</h2>
         <p>@Localizer["Rooms_Body"]</p>
     </div>
 </section>
 
 <section class="container split">
-    <div class="split__media">
+    <div class="split__media reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/home-care-700.webp 700w, /img/derived/home-care-1400.webp 1400w"
@@ -44,7 +44,7 @@
                  loading="lazy" />
         </picture>
     </div>
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Equipment_Title"]</h2>
         <p>@Localizer["Equipment_Body"]</p>
     </div>
@@ -52,7 +52,7 @@
 
 <section class="band band--stone">
     <div class="container split">
-        <div class="split__media">
+        <div class="split__media reveal">
             <picture>
                 <source type="image/webp"
                         srcset="/img/derived/center-hygiene-700.webp 700w, /img/derived/center-hygiene-1400.webp 1400w"
@@ -65,7 +65,7 @@
                      loading="lazy" />
             </picture>
         </div>
-        <div class="split__body">
+        <div class="split__body reveal">
             <h2>@Localizer["Hygiene_Title"]</h2>
             <p>@Localizer["Hygiene_Body"]</p>
         </div>
@@ -73,7 +73,7 @@
 </section>
 
 <section class="container split">
-    <div class="split__media">
+    <div class="split__media reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/center-facade-900.webp 900w, /img/derived/center-facade-1600.webp 1600w, /img/derived/center-facade-2400.webp 2400w"
@@ -86,9 +86,16 @@
                  loading="lazy" />
         </picture>
     </div>
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Access_Title"]</h2>
         <p>@Localizer["Access_Body"]</p>
         <a class="btn btn-secondary" asp-controller="Contact" asp-action="Index">@Localizer["Access_Link"]</a>
+    </div>
+</section>
+
+<section class="foundation-teaser">
+    <div class="container foundation-teaser__inner reveal">
+        <h2>@Localizer["Vision_Title"]</h2>
+        <p>@Localizer["Vision_Body"]</p>
     </div>
 </section>

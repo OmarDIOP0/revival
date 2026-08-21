@@ -2,10 +2,60 @@
 
 .hero {
   padding-top: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -160px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, var(--color-teal-tint) 0%, rgba(216, 242, 240, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero__intro {
   max-width: var(--content-narrow);
+}
+
+.trust-pills {
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.trust-pills li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-brand-dark);
+  background: var(--color-brand-tint);
+  border-radius: 999px;
+  padding: var(--space-2) var(--space-4);
+}
+
+.trust-pills li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-teal);
+  flex-shrink: 0;
 }
 
 .hero__actions {
@@ -64,9 +114,16 @@
 
 .stat-ring__fill {
   fill: none;
-  stroke: var(--color-accent);
+  stroke: var(--color-teal);
   stroke-width: 6;
   stroke-linecap: round;
+  stroke-dasharray: 301.6;
+  stroke-dashoffset: 301.6;
+  transition: stroke-dashoffset 1.3s var(--ease-out-soft) 150ms;
+}
+
+.reveal.is-visible .stat-ring__fill {
+  stroke-dashoffset: var(--ring-target, 301.6);
 }
 
 .stat-ring__value {
@@ -116,6 +173,28 @@
   padding-block: var(--space-8);
 }
 
+.calmer {
+  text-align: center;
+}
+
+.calmer .text-band {
+  margin-inline: auto;
+}
+
+.calmer__eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-teal-dark);
+  margin-bottom: var(--space-2);
+}
+
+.team-teaser__cta {
+  margin-top: var(--space-6);
+}
+
 /* Split content/photo block ------------------------------------------ */
 
 .split {
@@ -128,8 +207,19 @@
   max-width: var(--content-narrow);
 }
 
+.split__media {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
 .split__media img {
   width: 100%;
+  transition: transform var(--duration-slow) var(--ease-out-soft);
+}
+
+.split__media:hover img {
+  transform: scale(1.04);
 }
 
 @media (min-width: 768px) {
@@ -161,6 +251,15 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  transition: box-shadow var(--duration-standard) var(--ease-out-soft),
+              transform var(--duration-standard) var(--ease-out-soft);
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
 }
 
 .team-card__avatar {
@@ -194,6 +293,163 @@
   font-size: var(--text-sm);
 }
 
+.team-card__bio {
+  margin-top: var(--space-1);
+}
+
+/* Full team page — larger cards */
+.team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.team-grid .team-card__avatar {
+  width: 88px;
+  height: 88px;
+  font-size: var(--text-xl);
+}
+
+/* Numbered step list — used on the Care page --------------------------- */
+
+.steps {
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.steps li::before {
+  content: counter(step);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  flex-shrink: 0;
+  width: 2ch;
+}
+
+.steps li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Contact page ----------------------------------------------------------- */
+
+.contact-list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-list__label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+.map-block {
+  margin-top: var(--space-6);
+}
+
+.map-container {
+  margin-top: var(--space-4);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  min-height: var(--touch-target);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper-raised);
+  font-size: var(--text-base);
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+.field__error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.field--honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-notice {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-5);
+}
+
+.form-notice--success {
+  background: var(--color-brand-tint);
+  color: var(--color-brand-dark);
+}
+
+.form-notice--error {
+  background: #f6e4e0;
+  color: var(--color-danger);
+}
+
 /* Foundation teaser ------------------------------------------------------ */
 
 .foundation-teaser {
@@ -212,6 +468,10 @@
 
 .foundation-teaser p {
   color: rgba(255, 255, 255, 0.9);
+}
+
+.foundation-teaser a:not(.btn) {
+  color: #fff;
 }
 
 .foundation-teaser .btn-secondary {

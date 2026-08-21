@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Our Care</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Our Care</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Hemodialysis filters your blood when your kidneys no longer can. Each session lasts several hours, under continuous monitoring.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>A nurse adjusts a dialysis station monitor during a session.</value></data>
+  <data name="Steps_Title" xml:space="preserve"><value>What a session looks like</value></data>
+  <data name="Step1" xml:space="preserve"><value>Check-in and vitals — weight, blood pressure.</value></data>
+  <data name="Step2" xml:space="preserve"><value>Getting settled at your station.</value></data>
+  <data name="Step3" xml:space="preserve"><value>Connection to the generator by the care team.</value></data>
+  <data name="Step4" xml:space="preserve"><value>Continuous monitoring throughout the session.</value></data>
+  <data name="Step5" xml:space="preserve"><value>Disconnection and a final check before you leave.</value></data>
+  <data name="Frequency_Title" xml:space="preserve"><value>How often?</value></data>
+  <data name="Frequency_Body" xml:space="preserve"><value>Most patients come in 3 times a week. Your nephrologist adjusts this rhythm to your condition.</value></data>
+  <data name="Prepare_Title" xml:space="preserve"><value>What to bring</value></data>
+  <data name="Prepare_Item1" xml:space="preserve"><value>An ID and your medical file.</value></data>
+  <data name="Prepare_Item2" xml:space="preserve"><value>Something to pass the time — a book, music, a tablet.</value></data>
+  <data name="Prepare_Item3" xml:space="preserve"><value>A light snack, if your diet allows it.</value></data>
+  <data name="Prepare_ImageAlt" xml:space="preserve"><value>A nurse accompanies a patient in a wheelchair through a corridor of the centre.</value></data>
+  <data name="Cta_Title" xml:space="preserve"><value>A question before your first session?</value></data>
+  <data name="Cta_Link" xml:space="preserve"><value>Contact us</value></data>
+</root>

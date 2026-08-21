@@ -1,4 +1,64 @@
+@using System.Globalization
+@using Microsoft.Extensions.Options
+@using Revival.Configuration
+@inject IViewLocalizer Localizer
+@inject IOptions<List<TeamMember>> TeamOptions
 @{
-    ViewData["Title"] = "Team";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
+    var isFr = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr";
+    var team = (TeamOptions.Value ?? new List<TeamMember>()).Where(m => m.IsPublishable).ToList();
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+    <figure class="page-header__figure">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/team-header-900.webp 900w, /img/derived/team-header-1600.webp 1600w, /img/derived/team-header-2400.webp 2400w"
+                    sizes="100vw" />
+            <img src="/img/derived/team-header-1600.jpg"
+                 srcset="/img/derived/team-header-900.jpg 900w, /img/derived/team-header-1600.jpg 1600w, /img/derived/team-header-2400.jpg 2400w"
+                 sizes="100vw"
+                 width="1600" height="900"
+                 alt="@Localizer["Header_ImageAlt"]"
+                 fetchpriority="high" />
+        </picture>
+    </figure>
+</section>
+
+@if (team.Any())
+{
+    <section class="container team-teaser">
+        <div class="team-teaser__grid team-grid">
+            @foreach (var member in team)
+            {
+                var role = isFr ? member.RoleFr : member.RoleEn;
+                var bio = isFr ? member.BioShortFr : member.BioShortEn;
+                var initials = string.Concat(member.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(p => p[0])).ToUpperInvariant();
+                if (initials.Length > 2) { initials = initials[..2]; }
+                <div class="team-card">
+                    <div class="team-card__avatar" aria-hidden="true">
+                        @if (!string.IsNullOrWhiteSpace(member.Photo))
+                        {
+                            <img src="/img/@member.Photo" alt="" loading="lazy" />
+                        }
+                        else
+                        {
+                            @initials
+                        }
+                    </div>
+                    <p class="team-card__name">@member.Name</p>
+                    <p class="team-card__role">@role</p>
+                    @if (!string.IsNullOrWhiteSpace(bio))
+                    {
+                        <p class="team-card__bio text-sm">@bio</p>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+}
