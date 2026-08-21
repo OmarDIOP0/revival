@@ -34,7 +34,6 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\rjsm
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\scopedcss\bundle\Revival.styles.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\0yb3cj59o2-{0}-guvgd5x28z-guvgd5x28z.gz
-C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\rflie049ab-{0}-pl02z3y9nt-pl02z3y9nt.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\wgfsfxl6k6-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\staticwebassets.build.json.cache
@@ -48,10 +47,8 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revi
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\ref\Revival.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Home.Index.en.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Home.Index.fr.resources
-C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\01g1pt9lpw-{0}-t4k2s4yv2g-t4k2s4yv2g.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Center.Index.en.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Center.Index.fr.resources
-C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\jyl27ujc3c-{0}-81pvwofjru-81pvwofjru.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Care.Index.en.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Care.Index.fr.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Contact.Index.en.resources
@@ -62,5 +59,8 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revi
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.International.Index.fr.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Team.Index.en.resources
 C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\Revival.Resources.Views.Team.Index.fr.resources
-C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\ja2v5fqsss-{0}-luaulk5rgg-luaulk5rgg.gz
-C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\ml1r5ajihr-{0}-sf91pv366i-sf91pv366i.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\jyl27ujc3c-{0}-od6i4r6m35-od6i4r6m35.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\ja2v5fqsss-{0}-0zpod9zkry-0zpod9zkry.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\01g1pt9lpw-{0}-xi999bup8p-xi999bup8p.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\rflie049ab-{0}-9tj71dfusv-9tj71dfusv.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\revival\Revival\obj\Debug\net10.0\compressed\ml1r5ajihr-{0}-e8c0b0ud0h-e8c0b0ud0h.gz

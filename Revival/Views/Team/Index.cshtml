@@ -10,11 +10,11 @@
 }
 
 <section class="container page-header">
-    <div class="page-header__intro">
+    <div class="page-header__intro reveal">
         <h1>@Localizer["Header_Title"]</h1>
         <p class="text-lg">@Localizer["Header_Intro"]</p>
     </div>
-    <figure class="page-header__figure">
+    <figure class="page-header__figure reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/team-header-900.webp 900w, /img/derived/team-header-1600.webp 1600w, /img/derived/team-header-2400.webp 2400w"
@@ -32,7 +32,7 @@
 @if (team.Any())
 {
     <section class="container team-teaser">
-        <div class="team-teaser__grid team-grid">
+        <div class="team-teaser__grid team-grid reveal-group">
             @foreach (var member in team)
             {
                 var role = isFr ? member.RoleFr : member.RoleEn;
@@ -40,7 +40,7 @@
                 var initials = string.Concat(member.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries)
                     .Select(p => p[0])).ToUpperInvariant();
                 if (initials.Length > 2) { initials = initials[..2]; }
-                <div class="team-card">
+                <div class="team-card reveal">
                     <div class="team-card__avatar" aria-hidden="true">
                         @if (!string.IsNullOrWhiteSpace(member.Photo))
                         {

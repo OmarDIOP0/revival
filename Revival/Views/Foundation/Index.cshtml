@@ -8,11 +8,11 @@
 }
 
 <section class="container page-header">
-    <div class="page-header__intro">
+    <div class="page-header__intro reveal">
         <h1>@Localizer["Header_Title"]</h1>
         <p class="text-lg">@Localizer["Header_Intro"]</p>
     </div>
-    <figure class="page-header__figure">
+    <figure class="page-header__figure reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/support-700.webp 700w, /img/derived/support-1400.webp 1400w"
@@ -28,18 +28,18 @@
 </section>
 
 <section class="container split">
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Origin_Title"]</h2>
         <p>@Localizer["Origin_Body"]</p>
     </div>
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Help_Title"]</h2>
         <p>@Localizer["Help_Body"]</p>
     </div>
 </section>
 
 <section class="foundation-teaser">
-    <div class="container foundation-teaser__inner">
+    <div class="container foundation-teaser__inner reveal">
         <h2>@Localizer["Donate_Title"]</h2>
         <p>@Localizer["Donate_Body"]</p>
         @if (!string.IsNullOrWhiteSpace(foundation.DonateUrl))

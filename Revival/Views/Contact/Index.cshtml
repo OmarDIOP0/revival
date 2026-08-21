@@ -12,14 +12,14 @@
 }
 
 <section class="container page-header">
-    <div class="page-header__intro">
+    <div class="page-header__intro reveal">
         <h1>@Localizer["Header_Title"]</h1>
         <p class="text-lg">@Localizer["Header_Intro"]</p>
     </div>
 </section>
 
 <section class="container split">
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Direct_Title"]</h2>
         <ul class="contact-list">
             <li><span class="contact-list__label">@Localizer["Direct_Phone_Label"]</span><a href="@phoneHref">@site.Phone</a></li>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="split__body">
+    <div class="split__body reveal">
         <h2>@Localizer["Form_Title"]</h2>
 
         @if (Model.Submitted)

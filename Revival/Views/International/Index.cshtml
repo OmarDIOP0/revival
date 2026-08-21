@@ -10,11 +10,11 @@
 }
 
 <section class="container page-header">
-    <div class="page-header__intro">
+    <div class="page-header__intro reveal">
         <h1>@Localizer["Header_Title"]</h1>
         <p class="text-lg">@Localizer["Header_Intro"]</p>
     </div>
-    <figure class="page-header__figure">
+    <figure class="page-header__figure reveal">
         <picture>
             <source type="image/webp"
                     srcset="/img/derived/intl-header-900.webp 900w, /img/derived/intl-header-1600.webp 1600w, /img/derived/intl-header-2400.webp 2400w"
@@ -30,16 +30,16 @@
 </section>
 
 <section class="band band--stone">
-    <div class="container stats__row">
-        <div>
+    <div class="container stats__row reveal-group">
+        <div class="reveal">
             <h2>@Localizer["Timezone_Title"]</h2>
             <p>@Localizer["Timezone_Body"]</p>
         </div>
-        <div>
+        <div class="reveal">
             <h2>@Localizer["Response_Title"]</h2>
             <p>@Localizer["Response_Body"]</p>
         </div>
-        <div>
+        <div class="reveal">
             <h2>@Localizer["Dial_Title"]</h2>
             <p>
                 @Localizer["Dial_France"] : <a href="@phoneHref">@franceDialDisplay</a>
@@ -48,7 +48,7 @@
     </div>
 </section>
 
-<section class="container-narrow text-band">
+<section class="container-narrow text-band reveal">
     <h2>@Localizer["Documents_Title"]</h2>
     <ul>
         <li>@Localizer["Documents_Item1"]</li>

@@ -11,8 +11,25 @@ document.querySelectorAll(".nav-toggle").forEach(function (toggle) {
 
 // Reveal-on-scroll — purely decorative, content is already visible without it
 // (see .js .reveal in base.css). One-time reveal, no re-triggering.
-if ("IntersectionObserver" in window) {
+// A safety timeout force-reveals everything if IntersectionObserver never
+// fires for some reason, so content can never get stuck invisible.
+(function () {
   var revealTargets = document.querySelectorAll(".reveal");
+  if (!revealTargets.length) {
+    return;
+  }
+
+  var revealAll = function () {
+    revealTargets.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    revealAll();
+    return;
+  }
+
   var revealObserver = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -27,11 +44,9 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach(function (el) {
     revealObserver.observe(el);
   });
-} else {
-  document.querySelectorAll(".reveal").forEach(function (el) {
-    el.classList.add("is-visible");
-  });
-}
+
+  window.setTimeout(revealAll, 2500);
+})();
 
 // Contact page: the map only loads once the visitor asks for it.
 // Without JS, the button just opens Google Maps in a new tab instead.
