@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Home</value></data>
+  <data name="Hero_Title" xml:space="preserve"><value>Your session, in trusted hands in Dakar.</value></data>
+  <data name="Hero_Subtitle" xml:space="preserve"><value>Private hemodialysis centre in Point E. 23 beds, 3 VIP rooms, a team that knows you session after session.</value></data>
+  <data name="Hero_ImageAlt" xml:space="preserve"><value>A nurse adjusts a dialysis station monitor during a session.</value></data>
+  <data name="Cta_Book" xml:space="preserve"><value>Book an appointment</value></data>
+  <data name="Cta_Call" xml:space="preserve"><value>Call us</value></data>
+  <data name="Stat_Beds" xml:space="preserve"><value>hemodialysis beds</value></data>
+  <data name="Stat_Vip" xml:space="preserve"><value>VIP rooms</value></data>
+  <data name="Stat_PatientsPerDay" xml:space="preserve"><value>patients treated every day</value></data>
+  <data name="Care_Title" xml:space="preserve"><value>What a session looks like</value></data>
+  <data name="Care_Body" xml:space="preserve"><value>Your vitals are monitored continuously, in a calm, clean setting. Our team stays with you from start to finish.</value></data>
+  <data name="Care_ImageAlt" xml:space="preserve"><value>Dialysis machine, ready for a session.</value></data>
+  <data name="Care_Link" xml:space="preserve"><value>Discover our care</value></data>
+  <data name="Team_Title" xml:space="preserve"><value>The team that follows your care</value></data>
+  <data name="Team_Body" xml:space="preserve"><value>Certified caregivers, present at every session.</value></data>
+  <data name="Team_Link" xml:space="preserve"><value>Meet the whole team</value></data>
+  <data name="Foundation_Title" xml:space="preserve"><value>The Ida Bass Foundation</value></data>
+  <data name="Foundation_Body" xml:space="preserve"><value>For patients who cannot afford treatment, the Ida Bass Foundation covers all or part of the cost.</value></data>
+  <data name="Foundation_Link" xml:space="preserve"><value>Discover the foundation</value></data>
+</root>

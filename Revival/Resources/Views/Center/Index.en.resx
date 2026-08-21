@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>The Center</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>The Center</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>A private centre in Point E, designed for comfort during long sessions.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>Treatment room with two dialysis stations, natural light.</value></data>
+  <data name="Rooms_Title" xml:space="preserve"><value>23 beds, 3 VIP rooms</value></data>
+  <data name="Rooms_Body" xml:space="preserve"><value>Most sessions take place in a shared room, with an individual monitor for each patient. Three VIP rooms offer more quiet and privacy for patients who prefer them.</value></data>
+  <data name="Equipment_Title" xml:space="preserve"><value>One station, one generator, continuous monitoring</value></data>
+  <data name="Equipment_Body" xml:space="preserve"><value>Each station is equipped with a dialysis generator and monitored individually throughout the session.</value></data>
+  <data name="Equipment_ImageAlt" xml:space="preserve"><value>Dialysis machine, ready for a session.</value></data>
+  <data name="Hygiene_Title" xml:space="preserve"><value>Hygiene and protocols</value></data>
+  <data name="Hygiene_Body" xml:space="preserve"><value>Supplies are single-use and cleaning follows strict rules, to limit any risk of cross-contamination between patients.</value></data>
+  <data name="Hygiene_ImageAlt" xml:space="preserve"><value>Caregiver pushing a supply cart between two dialysis stations.</value></data>
+  <data name="Access_Title" xml:space="preserve"><value>In Point E, Dakar</value></data>
+  <data name="Access_Body" xml:space="preserve"><value>Find the full address, hours and directions on the contact page.</value></data>
+  <data name="Access_ImageAlt" xml:space="preserve"><value>Revival Medical Link centre facade.</value></data>
+  <data name="Access_Link" xml:space="preserve"><value>See address and hours</value></data>
+</root>

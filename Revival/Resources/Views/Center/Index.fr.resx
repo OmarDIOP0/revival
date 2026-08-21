@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Le centre</value></data>
+  <data name="Header_Title" xml:space="preserve"><value>Le centre</value></data>
+  <data name="Header_Intro" xml:space="preserve"><value>Un centre privé à Point E, pensé pour le confort pendant les longues séances.</value></data>
+  <data name="Header_ImageAlt" xml:space="preserve"><value>Salle de soins avec deux postes de dialyse, lumière naturelle.</value></data>
+  <data name="Rooms_Title" xml:space="preserve"><value>23 lits, 3 chambres VIP</value></data>
+  <data name="Rooms_Body" xml:space="preserve"><value>La plupart des séances se déroulent en salle partagée, avec un moniteur individuel par patient. Trois chambres VIP offrent plus de calme et d'intimité pour les patients qui le souhaitent.</value></data>
+  <data name="Equipment_Title" xml:space="preserve"><value>Un poste, un générateur, une surveillance continue</value></data>
+  <data name="Equipment_Body" xml:space="preserve"><value>Chaque poste est équipé d'un générateur de dialyse et surveillé individuellement pendant toute la séance.</value></data>
+  <data name="Equipment_ImageAlt" xml:space="preserve"><value>Générateur de dialyse, prêt pour une séance.</value></data>
+  <data name="Hygiene_Title" xml:space="preserve"><value>Hygiène et protocoles</value></data>
+  <data name="Hygiene_Body" xml:space="preserve"><value>Le matériel est à usage unique et le nettoyage suit des règles strictes, pour limiter tout risque de contamination croisée entre patients.</value></data>
+  <data name="Hygiene_ImageAlt" xml:space="preserve"><value>Soignant poussant un chariot de matériel entre deux postes de dialyse.</value></data>
+  <data name="Access_Title" xml:space="preserve"><value>À Point E, Dakar</value></data>
+  <data name="Access_Body" xml:space="preserve"><value>Retrouvez l'adresse complète, les horaires et l'itinéraire sur la page contact.</value></data>
+  <data name="Access_ImageAlt" xml:space="preserve"><value>Façade du centre Revival Medical Link.</value></data>
+  <data name="Access_Link" xml:space="preserve"><value>Voir l'adresse et les horaires</value></data>
+</root>

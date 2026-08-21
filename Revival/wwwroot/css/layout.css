@@ -79,6 +79,12 @@
   padding: var(--space-3) var(--space-5) var(--space-5);
 }
 
+/* Belt-and-braces: don't rely solely on the browser's native <details> hiding —
+   make the collapsed state explicit so mobile nav never renders open by accident. */
+.nav-toggle:not([open]) .primary-nav {
+  display: none;
+}
+
 .primary-nav a {
   display: flex;
   align-items: center;
@@ -135,7 +141,9 @@
     display: none;
   }
 
-  .primary-nav {
+  .primary-nav,
+  .nav-toggle:not([open]) .primary-nav {
+    display: flex;
     position: static;
     flex-direction: row;
     border-bottom: none;

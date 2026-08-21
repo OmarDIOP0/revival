@@ -1,0 +1,225 @@
+/* Hero ------------------------------------------------------------- */
+
+.hero {
+  padding-top: var(--space-8);
+}
+
+.hero__intro {
+  max-width: var(--content-narrow);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.hero__figure {
+  margin-top: var(--space-7);
+  margin-bottom: 0;
+}
+
+.hero__figure img {
+  width: 100%;
+}
+
+/* Key figures — an arc, not an icon card ---------------------------- */
+
+.stats {
+  background: var(--color-stone);
+  padding-block: var(--space-8);
+}
+
+.stats__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-6);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-ring {
+  position: relative;
+  width: 108px;
+  height: 108px;
+}
+
+.stat-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.stat-ring__track {
+  fill: none;
+  stroke: var(--color-stone-dark);
+  stroke-width: 6;
+}
+
+.stat-ring__fill {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.stat-ring__value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+}
+
+.stat__label {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+  max-width: 14ch;
+}
+
+/* Page header — reused across inner pages ----------------------------- */
+
+.page-header {
+  padding-top: var(--space-8);
+}
+
+.page-header__intro {
+  max-width: var(--content-narrow);
+}
+
+.page-header__figure {
+  margin-top: var(--space-7);
+}
+
+.page-header__figure img {
+  width: 100%;
+}
+
+/* Alternating full-bleed background band ------------------------------ */
+
+.band--stone {
+  background: var(--color-stone);
+}
+
+.text-band {
+  padding-block: var(--space-8);
+}
+
+/* Split content/photo block ------------------------------------------ */
+
+.split {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-9);
+}
+
+.split__body {
+  max-width: var(--content-narrow);
+}
+
+.split__media img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+/* Team teaser ---------------------------------------------------------- */
+
+.team-teaser {
+  padding-block: var(--space-9);
+}
+
+.team-teaser__intro {
+  max-width: var(--content-narrow);
+}
+
+.team-teaser__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.team-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-brand-tint);
+  color: var(--color-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+.team-card__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card__name {
+  font-weight: 700;
+  margin: 0;
+}
+
+.team-card__role {
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+}
+
+/* Foundation teaser ------------------------------------------------------ */
+
+.foundation-teaser {
+  background: var(--color-brand);
+  color: #fff;
+  padding-block: var(--space-9);
+}
+
+.foundation-teaser__inner {
+  max-width: var(--content-narrow);
+}
+
+.foundation-teaser h2 {
+  color: #fff;
+}
+
+.foundation-teaser p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.foundation-teaser .btn-secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+.foundation-teaser .btn-secondary:hover {
+  background: #fff;
+  color: var(--color-brand-dark);
+}

@@ -6,5 +6,5 @@
   <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
   <data name="Eyebrow" xml:space="preserve"><value>Bientôt disponible</value></data>
   <data name="Title" xml:space="preserve"><value>Cette page est en cours de construction</value></data>
-  <data name="Body" xml:space="preserve"><value>Nous finalisons cette rubrique. En attendant, appelez-nous ou écrivez sur WhatsApp — notre équipe vous répond directement.</value></data>
+  <data name="Body" xml:space="preserve"><value>Nous finalisons cette rubrique. En attendant, appelez-nous — notre équipe vous répond directement.</value></data>
 </root>

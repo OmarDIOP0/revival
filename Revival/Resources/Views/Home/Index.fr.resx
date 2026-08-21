@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Accueil</value></data>
+  <data name="Hero_Title" xml:space="preserve"><value>Votre séance, entre de bonnes mains à Dakar.</value></data>
+  <data name="Hero_Subtitle" xml:space="preserve"><value>Centre privé d'hémodialyse à Point E. 23 lits, 3 chambres VIP, une équipe qui vous suit séance après séance.</value></data>
+  <data name="Hero_ImageAlt" xml:space="preserve"><value>Une infirmière ajuste le moniteur d'un poste de dialyse pendant une séance.</value></data>
+  <data name="Cta_Book" xml:space="preserve"><value>Prendre rendez-vous</value></data>
+  <data name="Cta_Call" xml:space="preserve"><value>Nous appeler</value></data>
+  <data name="Stat_Beds" xml:space="preserve"><value>lits d'hémodialyse</value></data>
+  <data name="Stat_Vip" xml:space="preserve"><value>chambres VIP</value></data>
+  <data name="Stat_PatientsPerDay" xml:space="preserve"><value>patients accueillis chaque jour</value></data>
+  <data name="Care_Title" xml:space="preserve"><value>Ce que vous vivez pendant une séance</value></data>
+  <data name="Care_Body" xml:space="preserve"><value>Vos constantes sont surveillées en continu, dans un environnement calme et propre. Notre équipe reste à vos côtés du début à la fin.</value></data>
+  <data name="Care_ImageAlt" xml:space="preserve"><value>Générateur de dialyse, prêt pour une séance.</value></data>
+  <data name="Care_Link" xml:space="preserve"><value>Découvrir nos soins</value></data>
+  <data name="Team_Title" xml:space="preserve"><value>L'équipe qui vous suit</value></data>
+  <data name="Team_Body" xml:space="preserve"><value>Des soignants certifiés, présents à chaque séance.</value></data>
+  <data name="Team_Link" xml:space="preserve"><value>Voir toute l'équipe</value></data>
+  <data name="Foundation_Title" xml:space="preserve"><value>La Fondation Ida Bass</value></data>
+  <data name="Foundation_Body" xml:space="preserve"><value>Pour les patients qui ne peuvent pas financer leur traitement, la Fondation Ida Bass prend en charge tout ou partie des frais.</value></data>
+  <data name="Foundation_Link" xml:space="preserve"><value>Découvrir la fondation</value></data>
+</root>

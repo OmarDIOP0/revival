@@ -64,6 +64,10 @@ ul, ol {
   padding-left: 1.25em;
 }
 
+figure {
+  margin: 0;
+}
+
 /* Visible, generous focus ring everywhere — no invisible :focus resets */
 :focus-visible {
   outline: 3px solid var(--color-focus-ring);

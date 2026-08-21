@@ -1,4 +1,94 @@
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Center";
+    ViewData["Title"] = Localizer["PageTitle"].Value;
 }
-@await Html.PartialAsync("_ComingSoon")
+
+<section class="container page-header">
+    <div class="page-header__intro">
+        <h1>@Localizer["Header_Title"]</h1>
+        <p class="text-lg">@Localizer["Header_Intro"]</p>
+    </div>
+    <figure class="page-header__figure">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/center-rooms-900.webp 900w, /img/derived/center-rooms-1600.webp 1600w, /img/derived/center-rooms-2400.webp 2400w"
+                    sizes="100vw" />
+            <img src="/img/derived/center-rooms-1600.jpg"
+                 srcset="/img/derived/center-rooms-900.jpg 900w, /img/derived/center-rooms-1600.jpg 1600w, /img/derived/center-rooms-2400.jpg 2400w"
+                 sizes="100vw"
+                 width="1600" height="900"
+                 alt="@Localizer["Header_ImageAlt"]"
+                 fetchpriority="high" />
+        </picture>
+    </figure>
+</section>
+
+<section class="band band--stone">
+    <div class="container-narrow text-band">
+        <h2>@Localizer["Rooms_Title"]</h2>
+        <p>@Localizer["Rooms_Body"]</p>
+    </div>
+</section>
+
+<section class="container split">
+    <div class="split__media">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/home-care-700.webp 700w, /img/derived/home-care-1400.webp 1400w"
+                    sizes="(min-width: 768px) 40vw, 100vw" />
+            <img src="/img/derived/home-care-700.jpg"
+                 srcset="/img/derived/home-care-700.jpg 700w, /img/derived/home-care-1400.jpg 1400w"
+                 sizes="(min-width: 768px) 40vw, 100vw"
+                 width="700" height="1050"
+                 alt="@Localizer["Equipment_ImageAlt"]"
+                 loading="lazy" />
+        </picture>
+    </div>
+    <div class="split__body">
+        <h2>@Localizer["Equipment_Title"]</h2>
+        <p>@Localizer["Equipment_Body"]</p>
+    </div>
+</section>
+
+<section class="band band--stone">
+    <div class="container split">
+        <div class="split__media">
+            <picture>
+                <source type="image/webp"
+                        srcset="/img/derived/center-hygiene-700.webp 700w, /img/derived/center-hygiene-1400.webp 1400w"
+                        sizes="(min-width: 768px) 40vw, 100vw" />
+                <img src="/img/derived/center-hygiene-700.jpg"
+                     srcset="/img/derived/center-hygiene-700.jpg 700w, /img/derived/center-hygiene-1400.jpg 1400w"
+                     sizes="(min-width: 768px) 40vw, 100vw"
+                     width="700" height="700"
+                     alt="@Localizer["Hygiene_ImageAlt"]"
+                     loading="lazy" />
+            </picture>
+        </div>
+        <div class="split__body">
+            <h2>@Localizer["Hygiene_Title"]</h2>
+            <p>@Localizer["Hygiene_Body"]</p>
+        </div>
+    </div>
+</section>
+
+<section class="container split">
+    <div class="split__media">
+        <picture>
+            <source type="image/webp"
+                    srcset="/img/derived/center-facade-900.webp 900w, /img/derived/center-facade-1600.webp 1600w, /img/derived/center-facade-2400.webp 2400w"
+                    sizes="(min-width: 768px) 40vw, 100vw" />
+            <img src="/img/derived/center-facade-900.jpg"
+                 srcset="/img/derived/center-facade-900.jpg 900w, /img/derived/center-facade-1600.jpg 1600w, /img/derived/center-facade-2400.jpg 2400w"
+                 sizes="(min-width: 768px) 40vw, 100vw"
+                 width="1600" height="1061"
+                 alt="@Localizer["Access_ImageAlt"]"
+                 loading="lazy" />
+        </picture>
+    </div>
+    <div class="split__body">
+        <h2>@Localizer["Access_Title"]</h2>
+        <p>@Localizer["Access_Body"]</p>
+        <a class="btn btn-secondary" asp-controller="Contact" asp-action="Index">@Localizer["Access_Link"]</a>
+    </div>
+</section>
