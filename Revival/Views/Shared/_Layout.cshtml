@@ -67,27 +67,26 @@
                 <span>Revival</span>
             </a>
 
-            <details class="nav-toggle">
-                <summary aria-label="@Localizer["OpenMenu"]">
-                    <svg class="nav-toggle__icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
-                </summary>
-                <nav class="primary-nav" aria-label="@Localizer["Nav_Home"]">
-                    <a asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Home" ? "page" : null)">@Localizer["Nav_Home"]</a>
-                    <a asp-controller="Center" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Center" ? "page" : null)">@Localizer["Nav_Center"]</a>
-                    <a asp-controller="Care" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Care" ? "page" : null)">@Localizer["Nav_Care"]</a>
-                    <a asp-controller="Team" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Team" ? "page" : null)">@Localizer["Nav_Team"]</a>
-                    <a asp-controller="International" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "International" ? "page" : null)">@Localizer["Nav_International"]</a>
-                    <a asp-controller="Foundation" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Foundation" ? "page" : null)">@Localizer["Nav_Foundation"]</a>
-                    <a asp-controller="Contact" asp-action="Index" asp-route-culture="@currentCulture"
-                       aria-current="@(currentController == "Contact" ? "page" : null)">@Localizer["Nav_Contact"]</a>
-                </nav>
-            </details>
+            <nav class="primary-nav js-nav-collapsed" id="primary-nav" aria-label="@Localizer["Nav_Home"]">
+                <a asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Home" ? "page" : null)">@Localizer["Nav_Home"]</a>
+                <a asp-controller="Center" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Center" ? "page" : null)">@Localizer["Nav_Center"]</a>
+                <a asp-controller="Care" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Care" ? "page" : null)">@Localizer["Nav_Care"]</a>
+                <a asp-controller="Team" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Team" ? "page" : null)">@Localizer["Nav_Team"]</a>
+                <a asp-controller="International" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "International" ? "page" : null)">@Localizer["Nav_International"]</a>
+                <a asp-controller="Foundation" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Foundation" ? "page" : null)">@Localizer["Nav_Foundation"]</a>
+                <a asp-controller="Contact" asp-action="Index" asp-route-culture="@currentCulture"
+                   aria-current="@(currentController == "Contact" ? "page" : null)">@Localizer["Nav_Contact"]</a>
+            </nav>
+
+            <button type="button" class="nav-toggle-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="@Localizer["OpenMenu"]">
+                <svg class="nav-toggle-btn__icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+            </button>
 
             <div class="lang-switch" aria-label="@Localizer["Language"]">
                 <a href="@enUrl" hreflang="en" aria-current="@(currentCulture == "en" ? "true" : null)">EN</a>
@@ -102,6 +101,18 @@
 
     <footer class="site-footer">
         <div class="container site-footer__grid">
+            <div>
+                <h2>@Localizer["Footer_QuickLinks"]</h2>
+                <ul class="site-footer__contact-list">
+                    <li><a asp-controller="Home" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Home"]</a></li>
+                    <li><a asp-controller="Center" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Center"]</a></li>
+                    <li><a asp-controller="Care" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Care"]</a></li>
+                    <li><a asp-controller="Team" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Team"]</a></li>
+                    <li><a asp-controller="International" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_International"]</a></li>
+                    <li><a asp-controller="Foundation" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Foundation"]</a></li>
+                    <li><a asp-controller="Contact" asp-action="Index" asp-route-culture="@currentCulture">@Localizer["Nav_Contact"]</a></li>
+                </ul>
+            </div>
             <div>
                 <h2>@Localizer["Footer_Contact"]</h2>
                 <ul class="site-footer__contact-list">

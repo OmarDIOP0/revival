@@ -14,6 +14,7 @@
   <data name="Nav_Contact" xml:space="preserve"><value>Contact &amp; rendez-vous</value></data>
   <data name="OpenMenu" xml:space="preserve"><value>Ouvrir le menu</value></data>
   <data name="Language" xml:space="preserve"><value>Langue</value></data>
+  <data name="Footer_QuickLinks" xml:space="preserve"><value>Liens rapides</value></data>
   <data name="Footer_Contact" xml:space="preserve"><value>Contact</value></data>
   <data name="Footer_Hours" xml:space="preserve"><value>Horaires</value></data>
   <data name="Footer_FollowUs" xml:space="preserve"><value>Nous suivre</value></data>

@@ -10,9 +10,9 @@
 
 .site-header__bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-5);
+  gap: var(--space-4) var(--space-5);
   padding-block: var(--space-4);
 }
 
@@ -42,50 +42,19 @@
   color: var(--color-accent);
 }
 
-/* Primary nav — <details>/<summary> disclosure on mobile, plain row on desktop.
-   Works fully without JavaScript. */
-
-.nav-toggle {
-  margin-left: auto;
-}
-
-.nav-toggle > summary {
-  list-style: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: var(--touch-target);
-  min-height: var(--touch-target);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-}
-
-.nav-toggle > summary::-webkit-details-marker {
-  display: none;
-}
-
-.nav-toggle__icon {
-  width: 20px;
-  height: 20px;
-}
+/* Primary nav — sits right after the logo in the DOM and is always present.
+   Without JS it's simply a stacked list on narrow screens: never hidden.
+   With JS, .js-nav-collapsed lets a button toggle it on narrow screens. */
 
 .primary-nav {
+  order: 3;
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  background: var(--color-paper);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--space-3) var(--space-5) var(--space-5);
 }
 
-/* Belt-and-braces: don't rely solely on the browser's native <details> hiding —
-   make the collapsed state explicit so mobile nav never renders open by accident. */
-.nav-toggle:not([open]) .primary-nav {
+.js .primary-nav.js-nav-collapsed {
   display: none;
 }
 
@@ -106,13 +75,43 @@
   color: var(--color-brand-dark);
 }
 
+.nav-toggle-btn {
+  display: none;
+  order: 2;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+}
+
+.js .nav-toggle-btn {
+  display: inline-flex;
+}
+
+.nav-toggle-btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
 .lang-switch {
+  order: 4;
   display: flex;
   align-items: center;
   gap: var(--space-1);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: var(--text-sm);
+}
+
+@media (max-width: 899px) {
+  .site-header__bar {
+    justify-content: space-between;
+  }
 }
 
 .lang-switch a {
@@ -133,27 +132,27 @@
 
 @media (min-width: 900px) {
   .site-header__bar {
-    gap: var(--space-8);
-  }
-
-  .nav-toggle {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-  .nav-toggle > summary {
-    display: none;
+    flex-wrap: nowrap;
+    gap: var(--space-6);
   }
 
   .primary-nav,
-  .nav-toggle:not([open]) .primary-nav {
+  .js .primary-nav.js-nav-collapsed {
+    order: 0;
+    flex-basis: auto;
     display: flex;
-    position: static;
     flex-direction: row;
-    border-bottom: none;
-    padding: 0;
-    background: transparent;
-    gap: var(--space-2);
+    gap: var(--space-1);
+    margin-right: auto;
+  }
+
+  .nav-toggle-btn,
+  .js .nav-toggle-btn {
+    display: none;
+  }
+
+  .lang-switch {
+    order: 0;
   }
 }
 
@@ -174,7 +173,7 @@
 
 @media (min-width: 768px) {
   .site-footer__grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr 1fr 1fr;
   }
 }
 

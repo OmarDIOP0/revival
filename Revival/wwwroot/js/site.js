@@ -1,13 +1,21 @@
 // Vanilla JS only. The site must stay fully usable without this file.
 
-// Close the mobile nav disclosure after a link is activated.
-document.querySelectorAll(".nav-toggle").forEach(function (toggle) {
-  toggle.querySelectorAll("a").forEach(function (link) {
+// Mobile nav toggle. The nav is a plain, always-visible list without JS;
+// this only adds the collapse/expand behaviour as an enhancement.
+var navToggleBtn = document.querySelector(".nav-toggle-btn");
+var primaryNav = document.getElementById("primary-nav");
+if (navToggleBtn && primaryNav) {
+  navToggleBtn.addEventListener("click", function () {
+    var collapsed = primaryNav.classList.toggle("js-nav-collapsed");
+    navToggleBtn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+  });
+  primaryNav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
-      toggle.removeAttribute("open");
+      primaryNav.classList.add("js-nav-collapsed");
+      navToggleBtn.setAttribute("aria-expanded", "false");
     });
   });
-});
+}
 
 // Reveal-on-scroll — purely decorative, content is already visible without it
 // (see .js .reveal in base.css). One-time reveal, no re-triggering.
